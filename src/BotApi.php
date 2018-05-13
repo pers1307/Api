@@ -114,12 +114,12 @@ class BotApi
     /**
      * Url prefixes
      */
-    protected URL_PREFIX = 'https://api.telegram.org/bot';
+    protected $URL_PREFIX = 'https://api.telegram.org/bot';
 
     /**
      * Url prefix for files
      */
-    protected FILE_URL_PREFIX = 'https://api.telegram.org/file/bot';
+    protected $FILE_URL_PREFIX = 'https://api.telegram.org/file/bot';
 
     /**
      * CURL object
@@ -1145,7 +1145,7 @@ class BotApi
      */
     public function getUrl()
     {
-        return self::URL_PREFIX.$this->token;
+        return $this->URL_PREFIX . $this->token;
     }
 
     /**
@@ -1153,7 +1153,7 @@ class BotApi
      */
     public function getFileUrl()
     {
-        return self::FILE_URL_PREFIX.$this->token;
+        return $this->FILE_URL_PREFIX . $this->token;
     }
 
     /**
